@@ -19,7 +19,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* spreads content */
+      justify-content: space-between;
       align-items: center;
       padding: 20px;
     }
@@ -43,6 +43,20 @@
       margin: 15px 0;
     }
 
+    .labubu img {
+      width: 150px;
+      animation: wave 2s infinite ease-in-out;
+      margin: 20px 0;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
     a.button {
       display: inline-block;
       padding: 10px 22px;
@@ -53,7 +67,7 @@
       font-weight: bold;
       font-size: 0.95rem;
       transition: background 0.3s ease;
-      margin: 40px 0; /* centers button better */
+      margin: 40px 0;
     }
 
     a.button:hover {
@@ -81,6 +95,10 @@
   <div>
     <h1>Welcome to SayHi</h1>
     <p>Meet new people and start conversations easily.</p>
+  </div>
+
+  <div class="labubu">
+    <img src="YOUR_IMAGE_URL_HERE" alt="Labubu doodle waving">
   </div>
 
   <a href="signup.html" class="button">Get Started</a>
