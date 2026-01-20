@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SayHi Website</title>
-  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes neonPulse {
+      from {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px #ff7e5f,
+          0 0 20px #feb47b,
+          0 0 40px #ff7e5f,
+          0 0 80px #feb47b;
+      }
+      to {
+        text-shadow:
+          0 0 10px #fff,
+          0 0 20px #ff7e5f,
+          0 0 30px #feb47b,
+          0 0 60px #ff7e5f,
+          0 0 100px #feb47b;
+      }
+    }
+  </style>
 </head>
 <body>
   <div>
-    <!-- Neon glow heading inline -->
+    <!-- Neon glow heading -->
     <h1 style="
       font-size:2.2rem;
       font-weight:bold;
