@@ -19,28 +19,23 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      position: relative;
+      justify-content: space-between; /* spreads content */
+      align-items: center;
       padding: 20px;
     }
 
     h1 {
       font-size: 2.2rem;
       font-weight: bold;
-      position: relative;
-      display: inline-block;
-      padding: 10px 20px;
-      background: linear-gradient(90deg, #fff, #ff7e5f, #feb47b, #fff);
-      background-size: 200% auto;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: shimmer 3s linear infinite;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff7e5f, 0 0 30px #feb47b;
+      animation: pulse 2s infinite;
+      margin-top: 40px;
     }
 
-    @keyframes shimmer {
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff7e5f, 0 0 30px #feb47b; }
+      50% { text-shadow: 0 0 20px #fff, 0 0 30px #ff7e5f, 0 0 40px #feb47b; }
+      100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff7e5f, 0 0 30px #feb47b; }
     }
 
     p {
@@ -50,15 +45,15 @@
 
     a.button {
       display: inline-block;
-      padding: 8px 18px;
+      padding: 10px 22px;
       background: #fff;
       color: #ff7e5f;
       text-decoration: none;
       border-radius: 25px;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       transition: background 0.3s ease;
-      margin-top: 10px;
+      margin: 40px 0; /* centers button better */
     }
 
     a.button:hover {
@@ -66,20 +61,33 @@
     }
 
     footer {
-      margin-top: auto;
-      padding: 15px 0;
+      width: 100%;
+      text-align: center;
       font-size: 0.85rem;
-      opacity: 0.8;
+      opacity: 0.9;
+      padding: 15px 0;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.8rem;
+      color: #fff;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to SayHi</h1>
-  <p>Meet new people and start conversations easily.</p>
+  <div>
+    <h1>Welcome to SayHi</h1>
+    <p>Meet new people and start conversations easily.</p>
+  </div>
+
   <a href="signup.html" class="button">Get Started</a>
 
   <footer>
     <p>&copy; 2026 SayHi | Powered by GitHub Pages</p>
+    <span>Created by Chisom David</span>
   </footer>
 </body>
 </html>
