@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SayHi Messages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .tabs div {
+      font-weight: bold;
+      color: #ff7e5f;
+      cursor: pointer;
+    }
+
+    .chat-list {
+      padding: 15px;
+    }
+
+    .chat-item {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>Messages</header>
+
+  <div class="tabs">
+    <div>MESSAGES</div>
+    <div>ACTIVE</div>
+    <div>GROUPS</div>
+  </div>
+
+  <div class="chat-list">
+    <div class="chat-item">Alex: Hey, how are you?</div>
+    <div class="chat-item">Maria: Let’s catch up later!</div>
+    <div class="chat-item">Group Chat: SayHi Friends 🎉</div>
+  </div>
+</body>
+</html>
