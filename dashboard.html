@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SayHi Dashboard</title>
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff7e5f, #feb47b);
       color: #fff;
-      text-align: center;
-      padding: 30px;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      text-align: center;
       margin-bottom: 10px;
       text-shadow: 0 0 10px #fff, 0 0 20px #ff7e5f;
     }
 
-    .welcome {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    input[type="text"] {
-      padding: 10px;
-      width: 80%;
-      max-width: 300px;
-      border-radius: 20px;
-      border: none;
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
       margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
     .button {
@@ -41,37 +42,94 @@
       text-decoration: none;
       border-radius: 25px;
       font-weight: bold;
-      margin: 10px;
+      width: 120px;
+      text-align: center;
     }
 
-    .button:hover {
-      background: #ffe0d1;
+    .button:hover { background: #ffe0d1; }
+
+    .welcome {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    .profile, .settings {
-      margin-top: 40px;
+    input[type="text"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 350px;
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 5px;
+    }
+
+    .section p {
       font-size: 0.9rem;
-      opacity: 0.8;
+      margin: 5px 0;
     }
 
     footer {
-      margin-top: 60px;
+      margin-top: auto;
       font-size: 0.8rem;
+      text-align: center;
       opacity: 0.7;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to SayHi!</h1>
+
+  <div class="top-buttons">
+    <a href="settings.html" class="button">Settings</a>
+    <a href="chat.html" class="button">Chat</a>
+  </div>
+
   <div class="welcome">You’re signed in and ready to connect 🎉</div>
 
-  <input type="text" placeholder="Search users...">
-  <br>
-  <a href="chat.html" class="button">Start Chatting</a>
+  <input type="text" placeholder="Search users..." />
 
-  <div class="profile">
-    <p><strong>Your Profile:</strong> (username will go here)</p>
-    <p><a href="settings.html" class="button">Settings</a></p>
+  <!-- Notifications -->
+  <div class="section">
+    <h2>🔔 Notifications</h2>
+    <p>No new notifications</p>
+  </div>
+
+  <!-- Friends List -->
+  <div class="section">
+    <h2>🧑‍🤝‍🧑 Friends</h2>
+    <p>Friend 1</p>
+    <p>Friend 2</p>
+    <p>Friend 3</p>
+  </div>
+
+  <!-- Recent Chats -->
+  <div class="section">
+    <h2>💬 Recent Chats</h2>
+    <p>Chat with Alex</p>
+    <p>Chat with Maria</p>
+  </div>
+
+  <!-- Profile -->
+  <div class="section">
+    <h2>👤 Profile</h2>
+    <p><strong>Username:</strong> (username will go here)</p>
   </div>
 
   <footer>
